@@ -1,0 +1,158 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --primary: #0F62FE;
+  --secondary: #FFFFFF;
+  
+  /* Change this for overall font size*/
+  --minFont: 1rem;
+  
+  /*Change this to adjust the letter spacing for headings*/
+  --hLetterSpace: -.03rem;
+  
+  /* Font characteristics */
+  font-size:clamp(var(--minFont), calc(1rem + .1vw), 10rem);
+ --ratio: 1.294424;
+  --s0: .5rem;
+    
+  /* sorry Koji, i touched it*/  
+  
+  --base: calc(var(--s0) * var(--ratio));
+  /*Small-text to allow for more control*/
+  --st: calc(var(--h5) * var(--ratio));
+  --h5: calc(var(--base) * var(--ratio));
+  /*()Lead-text to allow for more control*/
+  --lt: calc(var(--h5) * var(--ratio));
+  --h4: calc(var(--h5) * var(--ratio));
+  --h3: calc(var(--h4) * var(--ratio));
+  --h2: calc(var(--h3) * var(--ratio));
+  /*A skip size to increase the difference*/
+  --h1s: calc(var(--h2) * var(--ratio));
+  --h1: calc(var(--h1s) * var(--ratio));
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;  
+  color: #1D1D1D;
+  
+  /* the last font listed is the one used */
+  font-family: 'Inter';
+  font-family: 'Roboto';  
+  font-family; 'Public Sans';
+  font-family: 'Noto Sans';
+
+  
+  letter-spacing: .01rem;
+  line-height: 1.6rem;
+  
+  /*Change font weight for the base: Imported 100, 200, 300, 400, 500, 600, 700 */
+  font-weight: 300;
+  margin: 0;
+  
+}
+
+header {
+  background-color: var(--primary);
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+}
+
+main {
+  margin: 0 auto;
+  max-width: calc(60ch + 2em);
+  padding: 1em;
+}
+
+* +* { 
+margin-bottom: 1rem;
+}
+
+
+
+h1 {
+  font-weight: 600;
+  font-size: var(--h1);
+  line-height: 1.619;
+  letter-spacing: var(--hLetterSpace);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: var(--h2);
+  line-height: 1.667;
+  letter-spacing: var(--hLetterSpace);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: var(--h3);
+  line-height: 1.731;
+  letter-spacing: var(--hLetterSpace);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: var(--h4);
+  line-height: 1.875;
+  letter-spacing: var(--hLetterSpace);
+  margin-top: 2rem;
+  margin-bottom: .1rem;
+  margin-bottom: 1rem;
+}
+
+h5 {
+  font-weight: 500;
+  font-size: var(--h5);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+lt {
+  font-weight: 300;
+  font-size: calc(var(--lt) + .1rem); 
+  margin-bottom: .1rem;
+  margin-bottom: 1em;
+
+}
+
+st {
+  font-weight: 300;
+  font-size: calc(var(--st) - .25rem); 
+}
+
+li + li {
+  margin-top: .1rem;
+ }
+
+
+blockquote {
+  border-left: rgba(0,0,0,0.12) 2px solid;
+  margin-left: 0;
+  padding-left: calc(2ch + 2px);
+}
+
+
+footer {
+  background-color: rgba(0,0,0,.12);
+  font-size: 0.9rem;
+  font-weight: 200;
+  text-align: center;
+  padding: 1em;
+}
+
+article > header ~ * {
+  margin-top: 0.15em;
+}
